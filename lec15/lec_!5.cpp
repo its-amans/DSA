@@ -53,7 +53,10 @@ int main() {
 */
 
 
-//painters partition problem
+
+
+//PAINTERS PARTITION PROBLEM
+/*
 #include<iostream>
 using namespace std;
 bool possiblesol(int arr[] ,int n ,int m ,int mid){
@@ -101,3 +104,4 @@ int main(){
     int result;
     cout<<"the partition of sections are:"<<painterPartition(arr,n,m);
 }
+*/
