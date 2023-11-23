@@ -109,6 +109,7 @@ int main(){
 
 
 //AGGRESSIVE COW PROBLEM
+/*
 #include<iostream>
 #include <algorithm>
 using namespace std;
@@ -162,10 +163,8 @@ void selectionsort(int arr[],int n){
       if(min_index!=i)
       swap(arr[min_index],arr[i]);
     }
-    for(int i=0;i<n;i++){
-        cout<<arr[i]<<" ";
-    }
 }
+
 int main(){
     int a[]={4,2,1,3,6};
     int n=sizeof(a)/sizeof(a[0]);
@@ -173,3 +172,4 @@ int main(){
     int m=2;
     cout<<"The maximum possible distance between cows are: "<<maxdistancecow(a,m,n);
 }
+*/
