@@ -120,3 +120,7 @@ int main(){
     cout<<endl<<"THE MAXSIZE OF D3 DEQUE IS:"<<d3.max_size()<<endl;  //max_size function. IT RETURNS THE MAX SIZE THAT THE DEQUE CAN HOLD.(EX:1073741823)
 }
 */
+
+
+
+
