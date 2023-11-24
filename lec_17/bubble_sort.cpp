@@ -1,5 +1,5 @@
 //BUBBLE SORT
-/*
+
 #include<iostream>
 using namespace std;
 bool swapped= false;
@@ -10,11 +10,11 @@ void bubblesort(int arr[],int n){
             swap(arr[j],arr[j+1]);
             swapped=true;
         }
-    }
     //it is just because to decrese time complexity 
     //already swapped
     if(swapped==false){
         break;
+    }
     }
     for(int i=0;i<n;i++){
         cout<<arr[i]<<" ";
@@ -26,4 +26,4 @@ int main(){
     cout<<"THE SORTED ARRAY IS :"<<endl;
     bubblesort(arr,n);
 }
-*/
+
