@@ -1,5 +1,5 @@
 //SELECTION SORT
-/*
+
 #include<iostream>
 using namespace std;
 void selectionsort(int arr[],int n){
@@ -32,4 +32,4 @@ int main(){
     selectionsort(arr ,n);
     printarray(arr,n);
 }
-*/
+
