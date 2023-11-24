@@ -122,5 +122,139 @@ int main(){
 */
 
 
+//LIST USING STL
+/*
+#include<iostream>
+#include<list>
+using namespace std;
+int main(){
+    list<int> l;  //list declaration
+    l.push_back(1);  //push_back function
+    l.push_front(2);  //push_front function
+    l.push_front(3);
+    cout<<"THE ELEMENTS IN LIST ARE:"<<endl;
+    for(int i:l){
+        cout<<i<<" ";
+    }
+    cout<<endl<<"THE SIZE OF LIST IS:"<<l.size()<<endl;  //size of list
+    cout<<"THE FRONT ELEMENT IS :"<<l.front()<<endl;  //front element
+    cout<<"THE LAST ELEMENT IS:"<<l.back()<<endl;  //last element
+    list<int> l1(l) ;  //copying list l to l1
+    cout<<"THE COPIED ELEMENT ARE:"<<endl;
+    for(int i:l1){
+        cout<<i<<" ";
+    }
+    l.pop_front();   //pop_front function
+    cout<<endl<<"THE ELEMENTS  CURRENTLY IN LIST ARE:"<<endl;
+    for(int i:l){
+        cout<<i<<" ";
+    }
+    l.pop_back();   //pop_back function
+    cout<<endl<<"THE ELEMENTS  CURRENTLY IN LIST ARE:"<<endl;
+    for(int i:l){
+        cout<<i<<" ";
+    }
+    
+    list<int> l2={1,2,3,4,5};  //list declaration
+    cout<<endl<<"THE SIZE OF LIST IS:"<<l2.size()<<endl; 
+    cout<<endl<<"THE ELEMENTS IN LIST BEFORE ERASE ARE:"<<endl;
+    for(int i:l2){
+        cout<<i<<" ";
+    }
+    l2.erase(l2.begin());  //can be deleted by giving the index and by using begin and last function.
+    cout<<endl<<"THE SIZE OF LIST AFTER ERASE IS:"<<l2.size()<<endl; 
+    cout<<endl<<"THE ELEMENTS IN LIST AFTER ERASE ARE:"<<endl;
+    for(int i:l2){
+        cout<<i<<" ";
+    }
+}
+*/
 
 
+
+//STACK USING STL
+/*
+#include<iostream>
+#include<stack>
+using namespace std;
+int main(){
+    stack<string> s;    //stack declaration
+    s.push("AMAN");     //push function
+    s.push("KUMAR");
+    s.push("SRIVASTAVA");
+    cout<<"THE ELEMENT AT TOP OF STACK:"<<endl;
+    cout<<s.top()<<endl;    //top function
+    s.pop();                //pop function
+    cout<<"THE ELEMENT AT TOP OF STACK AFTER POP:"<<endl;  
+    cout<<s.top()<<endl; 
+    cout<<"THE SIZE OF ATACK IS :"<<s.size()<<endl;   //size function
+    cout<<s.empty()<<endl;  //empty function . IT RETURN SANSWER IN BOOL FORM i.e.,1 (if atack is empty) OR 0 (if stack is not empty)
+    cout<<"THE STACK ELEMENTS ARE:"<<endl;
+    for(int i=0;i<3;i++){
+        cout<<s.top()<<endl;  
+        s.pop();   
+    }
+}
+*/
+
+
+
+//QUEUE USING STL
+/*#include<iostream>
+#include<queue>
+using namespace std;
+int main(){
+    queue<string> s;   //queue declaration
+    s.push("AMAN");    //push function
+    s.push("KUMAR");
+    s.push("SRIVASTAVA");
+    cout<<"THE SIZE OF QUEUE IS:"<<s.size()<<endl;
+    s.pop();  //pop function. IT follows the fifo order so it delete the element which is pushed first.
+    cout<<"THE SIZE OF QUEUE AFTER POP IS:"<<s.size()<<endl;
+    int n=s.size();
+    for(int i=0;i<n;i++){
+        cout<<s.front()<<endl;  //front function
+        s.pop();
+    }
+    cout<<s.empty(); //empty function . IT RETURN SANSWER IN BOOL FORM i.e.,1 (if queue is empty) OR 0 (if queue is not empty)
+}
+*/
+
+
+//PRIORITY QUEUE USING STL
+/*
+#include<iostream>
+#include<queue>
+using namespace std;
+int main(){
+    //max heap
+    priority_queue<int> max; //priority queue declaration
+    //min heap
+    priority_queue< int,vector<int>,greater<int> > min;  //min priority queue declaration 
+    max.push(4);
+    max.push(2);
+    max.push(5);
+    max.push(4);
+    max.push(3);
+    cout<<"THE SIZE OF MAX HEAP QUEUE IS:"<<max.size()<<endl;
+    int n=max.size();
+    cout<<"THE ELEMENTS IN MAX HEAP QUEUE ARE:"<<endl;
+    for(int i=0;i<n;i++){
+        cout<<max.top()<<endl;
+        max.pop();
+    }
+    min.push(2);
+    min.push(1);
+    min.push(4);
+    min.push(3);
+    min.push(5);
+    cout<<"THE SIZE OF MIN HEAP QUEUE IS:"<<min.size()<<endl;
+    int x=min.size();
+    cout<<"THE ELEMENTS IN MIN HEAP QUEUE ARE:"<<endl;
+    for(int i=0;i<x;i++){
+        cout<<min.top()<<endl;
+        min.pop();
+    }
+    cout<<"THIS BOOL TELLS THAT MIN QUEUE IS EMPTY OR NOT"<<min.empty();  //empty function . IT RETURN SANSWER IN BOOL FORM i.e.,1 (if queue is empty) OR 0 (if queue is not empty)
+}
+*/
