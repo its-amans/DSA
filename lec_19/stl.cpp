@@ -187,7 +187,7 @@ int main(){
     s.pop();                //pop function
     cout<<"THE ELEMENT AT TOP OF STACK AFTER POP:"<<endl;  
     cout<<s.top()<<endl; 
-    cout<<"THE SIZE OF ATACK IS :"<<s.size()<<endl;   //size function
+    cout<<"THE SIZE OF STACK IS :"<<s.size()<<endl;   //size function
     cout<<s.empty()<<endl;  //empty function . IT RETURN SANSWER IN BOOL FORM i.e.,1 (if atack is empty) OR 0 (if stack is not empty)
     cout<<"THE STACK ELEMENTS ARE:"<<endl;
     for(int i=0;i<3;i++){
@@ -255,6 +255,144 @@ int main(){
         cout<<min.top()<<endl;
         min.pop();
     }
-    cout<<"THIS BOOL TELLS THAT MIN QUEUE IS EMPTY OR NOT"<<min.empty();  //empty function . IT RETURN SANSWER IN BOOL FORM i.e.,1 (if queue is empty) OR 0 (if queue is not empty)
+    cout<<"THIS BOOL TELLS THAT MIN QUEUE IS EMPTY OR NOT:"<<min.empty();  //empty function . IT RETURN SANSWER IN BOOL FORM i.e.,1 (if queue is empty) OR 0 (if queue is not empty)
 }
 */
+
+
+//SET USING STL
+/*
+#include<iostream>
+#include<set>
+using namespace std;
+int main(){
+    set<int> s; //set declaration
+    s.insert(1);
+    s.insert(2);
+    s.insert(3);
+    s.insert(1);
+    s.insert(5);
+    cout<<"THE SIZE OF SET IS:"<<s.size()<<endl;  //size function
+    cout<<endl<<"THE ELEMENTS IN SET ARE:"<<endl;
+    for(int i:s){
+        cout<<i<<" ";
+    }
+    cout<<endl<<"THIS BOOL TELLS THAT SET IS EMPTY OR NOT:"<<s.empty()<<endl;  //empty function . IT RETURN SANSWER IN BOOL FORM i.e.,1 (if set is empty) OR 0 (if set is not empty)
+    
+    // this block is just to find the element 3 in set and print the elements after 3.
+    cout<<endl<<"THE ELEMENTS AFTER 3 ARE:"<<endl;
+    set<int>::iterator itr=s.find(3);       //find function
+    for(auto it=itr;it!=s.end();it++){      //for loop
+        cout<<*it<<" ";
+    }
+
+    cout<<endl<<"THE ELEMENT 3 IS PRESENT OR NOT:"<<s.count(3)<<endl;      //find function
+    cout<<endl<<"THE ELEMENTS IN SET BEFORE ERASE ARE:"<<endl;
+    for(int i:s){
+        cout<<i<<" ";
+    }
+    //s.erase(s.begin());                    //THIS ERASE FUNCTION DELETE AN ELEMENT FROM 0 INDEX.
+    set<int>::iterator it=s.begin();         //iterator declaration
+    it++;
+    s.erase(it);                             //erase function which will delete the element at index 1.
+    
+    cout<<endl<<"THE ELEMENTS IN SET AFTER ARE:"<<endl;
+    for(int i:s){
+        cout<<i<<" ";
+    }
+}
+*/
+
+//INSERT,FIND,ERASE AND COUNT HAVE TIME COMPLEXITY OF O(LOGN) WHERE N IS THE SIZE OF SET.
+//SIZE,BEGIN,END,EMPTY HAVE TIME COMPLEXITY OF O(1).
+
+
+
+//MAP USING STL
+/*
+#include<iostream>
+#include<map>
+using namespace std;
+int main(){
+   //MAP PRINTS THE ELEMENYT IN SORTED ORDER ACCORDING TO THE KEY.
+   //IF YOU USE UNORDERED MAPP THEN IT WILL PRINT THE ELEMENTS IN RANDOM ORDER MAY BE BY CHANCE IT IS SORTED BUT NOT ALWAYS.
+   map<int,string> m;   //map declaration
+   m[1]="AMAN";         //insert function
+   m[5]="SRIVASTAVA";
+   m[2]="KUMAR";
+   m.insert({3,"VAIBHAV"});   //insert function
+   for(auto i:m){
+    cout<< i.first <<" "<< i.second<<endl;  //first and second function
+   }
+   cout<<"THE SIZE OF THE MAP IS:"<<m.size()<<endl;  //size function
+   cout<<"THE ELEMENT AT 2 INDEX IS:"<<m.at(2)<<endl;  //at function
+   cout<<"THE ELEMENT AT 2 INDEX IS:"<<m[2]<<endl;  //at function another way can be targeted by using [](key).
+   cout<<"IT GIVES THE BOOLEAN ANSWER THAT ELEMENT IS PRESENT OR NOT:"<<m.count(13)<<endl;  //count function
+    auto it =m.find(3);     //find function.FIND FUNCTION RETURNS THE FIND FUNCTION POINTS TO THE ELEMENT AT THE GIVEN KEY AND ITS ONWARD ELEMENTS ADDRESS.
+    cout<<"THE ELEMENT TO BE FIND AND ITS ONWARD ELEMENTS:"<<endl;
+    for(auto i=it;i!=m.end();i++){
+        cout<<(*i).first<<" "<<(*i).second<<endl;//THE ITERATOR POINTS TO THE ADDRESS OF THE TARGET ELEMENT AND ITS ONWARD ELEMENT .SO TO PRINT THE VALUES AT THE ADD OF ITERATOR WE USE *.
+    }
+
+   cout<<"THE ELEMENTS BEFORE ERASE ARE:"<<endl;
+   for(auto i:m){
+    cout<< i.first<<" "<<i.second<<endl;
+   }
+   m.erase(2);  //erase function
+   cout<<"THE ELEMENTS AFTER ERASE ARE:"<<endl;
+   for(auto i:m){
+    cout<< i.first<<" "<<i.second<<endl;
+   }
+}
+*/
+
+
+//UNORDERED MAP AND UNORDERED SET BACHA H USE KR LENA.  
+
+
+//algoriths which are commonly used 
+#include<iostream>
+#include<vector>
+#include<algorithm>
+using namespace std;
+int main(){
+    vector<int> v;
+    v.push_back(20);
+    v.push_back(40);
+    v.push_back(30);
+    v.push_back(50);
+    v.push_back(10);
+    sort(v.begin(),v.end());  //sort function
+    cout<<"THE MIN ELEMENT IS:"<<*min_element(v.begin(),v.end())<<endl;  //min_element function
+    cout<<"THE MAX ELEMENT IS:"<<*max_element(v.begin(),v.end())<<endl;  //max_element function
+    cout<<"THE ELEMENTS AFTER SORTING ARE:"<<endl;
+    for(int i:v){
+    cout<< i<<" ";
+    }
+    cout<<endl<<"THE LOWER BOUND IS at index:"<<lower_bound(v.begin(),v.end(),40)-v.begin()<<endl;  //lower_bound function
+    cout<<"THE UPPER BOUND IS at index:"<<upper_bound(v.begin(),v.end(),40)-v.begin()<<endl;
+    cout<<endl<<"FINDING ELEMENT:"<<binary_search(v.begin(),v.end(),30)<<endl;  //binary_search function
+    int a=10;
+    int b=20;
+   
+    cout<<"THE MIN ELEMENT IS:"<<min(a,b)<<endl;   //min function
+    cout<<"THE MAX ELEMENT IS:"<<max(a,b)<<endl;   //max function
+    swap(a,b);  //swap function
+    cout<<"THE SWAPPED ELEMENTS ARE:"<<a<<" "<<b<<endl;
+
+    string s="AMAN";
+    reverse(s.begin(),s.end());  //reverse function
+    cout<<"THE REVERSED STRING IS:"<<s<<endl;
+
+    cout<<"THE ELEMENTS before rotation ARE:"<<endl;
+    for(int i:v){
+    cout<< i <<" ";
+    }
+    cout<<endl;
+    rotate(v.begin(),v.begin()+2,v.end());  //rotate function.rotate(v.begin(),v.end(),v.end()); to rotate all the elements.
+    cout<<"THE ELEMENTS AFTER  2 rotation ARE:"<<endl;
+    for(int i:v){
+    cout<< i <<" ";
+    }
+    
+}
