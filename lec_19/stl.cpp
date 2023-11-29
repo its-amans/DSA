@@ -27,9 +27,6 @@ using namespace std;
 int main(){
      vector<int> v;    //vector declaration
      cout<<endl;
-     for(int i:v){  //for each loop
-         cout<<i<<" ";
-     }
      vector<int> v1(5,1);  //vector declaration with size and value
      for(int i=0;i<5;i++){  //for loop
         cout<<v1[i]<<" ";
@@ -46,6 +43,9 @@ int main(){
      v.push_back(2);
      cout<<"THE CAPICITY OF VECTOR IS:"<<v.capacity()<<endl;  //capacity of vector
      v.push_back(3);
+
+     //VECTOR DOUBLES ITS CAPACITY WHENEVER IT IS FULL.NOT the size.
+
      cout<<"THE CAPICITY OF VECTOR IS:"<<v.capacity()<<endl;  //capacity of vector
      cout<<"THE SIZE OF VECTOR IS:"<<v.size()<<endl;  //size of vector
 
@@ -67,6 +67,7 @@ int main(){
     cout<<"THE SIZE AFTER CLEAR IS:"<<v.size()<<endl;  //size after clear
 }
 */
+
 
 
 //deque using stl
@@ -200,7 +201,8 @@ int main(){
 
 
 //QUEUE USING STL
-/*#include<iostream>
+/*
+#include<iostream>
 #include<queue>
 using namespace std;
 int main(){
@@ -351,6 +353,7 @@ int main(){
 
 
 //algoriths which are commonly used 
+/*
 #include<iostream>
 #include<vector>
 #include<algorithm>
@@ -394,5 +397,5 @@ int main(){
     for(int i:v){
     cout<< i <<" ";
     }
-    
 }
+*/
