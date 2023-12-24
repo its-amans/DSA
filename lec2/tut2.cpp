@@ -11,7 +11,7 @@ int main() {
   cout<< f<<endl;
   double d=1.2345533589;
   cout<< d<<endl;
- int size=sizeof(bl);
+ int size=sizeof(d);
   cout<< "size of double:" <<size<< endl ;
   /* type casting
     how memory stores data type values 

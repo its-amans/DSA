@@ -7,7 +7,7 @@ int main()
   cout<<"enter the both values "<<endl<< "enter ";
   cin>>n>>m;
   if(n>m)
-    cout<<"Nis big"<<endl;
+    cout<<"N is big"<<endl;
   else
   {
     if(n==m)

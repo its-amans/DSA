@@ -25,26 +25,26 @@ int main()
     }
     cout<< sum;
 }*/
-//evensum upto n term
-/*#include<iostream>
-using namespace std;
-int main()
-{
-    int a;
-    int evensum=0;
-    int i=1;
-    cin>>a;
-    while(i<=a)
-{
-    while(i%2==0)
-    {
-        evensum=evensum+i;
-        i++;
-    }
-}
-cout<< evensum;
-
-}*/
+//evensum upto n term     // not working
+// #include<iostream>
+// using namespace std;
+// int main()
+// {
+//     int a;
+//     int evensum=0;
+//     int i=2;
+//     cin>>a;
+//     while(i<=a)
+// {
+//     if(i % 2 == 0)
+//     {
+//         evensum=evensum+i;
+//         i=i+1;
+//     }
+// }
+// cout<< evensum;
+// return 0;
+// }
 // farenheit to celcius
 /*#include<iostream>
 using namespace std;

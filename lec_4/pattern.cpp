@@ -4,6 +4,11 @@
 ****
 ****
 */
+// *
+// **
+// ***
+// ****
+
 /*
 #include<iostream>
 using namespace std;
@@ -12,17 +17,19 @@ int main()
 cin>> n;
 int i=1;
 while(i<=n)
-{  int j=1;
-
-    while(j<=n)
-   {cout<<"*";
+ {
+  int j=1;
+  while(j<=n)
+   {
+    cout<<"*";
     j++;
-
+   }
+ cout<<endl;
+ i=i+1;
+ }
 }
-cout<<endl;
-i=i+1;}
 
-}*/
+*/
 
 // pattern2
 /*
@@ -218,10 +225,12 @@ int main()
 //ek hi jaise h bs ek count=1 leke prink aur increment bhi krdo
 /*
 1
-23
-456
-789
+2 3
+4 5 6
+7 8 9 10
 */
+
+
 //pattern9
 
 /*
@@ -230,26 +239,30 @@ int main()
 345
 4567
 */
+
 /*
-#include<iostream>
+# include<iostream>
 using namespace std;
-int main()
-{
+int main(){
     int n;
-    cin>> n;
+    cout<<"Enter the no of rows:";
+    cin>>n;
     int i=1;
-    while(i<=n)
-    {
-        int j=1;
+    while(i<=n){
         int k=i;
-        while(j<=i)
-        {cout<<k;
-        k++;
-        j++;}
+        int j=1;
+        while(j<=i){
+            cout<<k;
+            k++;
+            j++;
+        }
         cout<<endl;
         i++;
     }
-}*/
+}
+*/
+
+
 //pattern10
 /*
 1
