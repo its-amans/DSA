@@ -1,38 +1,49 @@
 //swap alternate 
 
-/*
-#include<iostream>
-using namespace std;
-void swapalternate(int a[], int n){
-    for(int i=0;i<n;i++){
-          if(i+1<n){
-
-            int temp=a[i];
-            a[i]=a[i+1];
-            a[i+1]=temp;
-            i++;}
-    }
-}
-void printarray(int a[],int n){
-    cout<<"the alternate swapped array is :";
-    for(int i=0;i<n;i++){
-        cout<<a[i]<<" ";
-    }
-}
-int main(){
-   int n;
-   cin>>n;
-   int a[100];
-   cout<<"enter the elements ";
-   for(int i=0;i<n;i++){
-    cin>>a[i];
-   }
-   swapalternate(a,n);
-   printarray(a,n);
-}
-*/
+// #include<iostream>
+// using namespace std;
+// int main(){
+//     int arr[]={1,2,3,4,5,6};
+//     int n=sizeof(arr)/sizeof(arr[0]);
+//     for(int i=0;i<n;i++){
+//         swap(arr[i],arr[i+1]);
+//         i++;
+//     }
+//     cout<<"The new array is :";
+//     for(int i=0;i<n;i++){
+//         cout<<arr[i]<<" ";
+//     }
+// }
 
 
+
+
+// Wrong Approach  .TO find the unique element in an array
+
+// #include<iostream>
+// using namespace std;
+// int main(){
+//     int arr[]={1,1,4,2,4,4,3,3};
+//     int count;
+//     int unique=0;
+//     int n=sizeof(arr)/sizeof(arr[0]);
+//     for(int i=0;i<n;i++){
+//         int temp=arr[i];
+//         count=0;
+//         for(int j=0;j<n;j++){
+//             if(arr[j]==temp){
+//                 count++;
+//                 unique=arr[j];
+//             }
+//         }
+//     }
+//     if(count<=1){
+//         cout<<"unque is:"<<unique;
+//     }
+//     else{
+//         cout<<"not unique";
+//     }
+// }
 
 
 //find duplicate element
@@ -103,7 +114,7 @@ the unique element is3*/
 
 
 
-// intersection o two array
+// intersection of two array
 /*
 #include<iostream>
 using namespace std;
@@ -134,27 +145,27 @@ cout<<"the intersection is";
 unique(a,b,n);
 }
 */
-#include<iostream>
-using namespace std;
-int main(){
-int n;
-cin>>n;
-int a[100];
-cout<<"enter the elements";
-for(int i=0;i<n;i++){
-cin>>a[i];
-}
-uniqueoccurence(a,n);
-}
-bool uniqueoccurence(int a[],int n){
-    int count=0;
-for(int i=0;i<n;i++){
-    for(int j=0;j<n;j++){
-    if((a[i]==a[j])&&(i!=j))
-    {
-        count++;
-    }
-    int ans=count;
-    }
-}
-}
+// #include<iostream>
+// using namespace std;
+// int main(){
+// int n;
+// cin>>n;
+// int a[100];
+// cout<<"enter the elements";
+// for(int i=0;i<n;i++){
+// cin>>a[i];
+// }
+// uniqueoccurence(a,n);
+// }
+// bool uniqueoccurence(int a[],int n){
+//     int count=0;
+// for(int i=0;i<n;i++){
+//     for(int j=0;j<n;j++){
+//     if((a[i]==a[j])&&(i!=j))
+//     {
+//         count++;
+//     }
+//     int ans=count;
+//     }
+// }
+// }

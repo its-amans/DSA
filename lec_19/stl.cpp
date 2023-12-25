@@ -1,72 +1,77 @@
 
 //ARRAY USING STL
-/*
-#include<iostream>
-#include<array>
-using namespace std;
-int main(){
-    int arr[3]={1,2,3};
-    array<int,4> a={1,2,3,4}; 
-    int size=a.size();  //size of array
-    for(int i=0;i<size;i++){
-        cout<<a[i]<<" ";
-    }
 
-    cout<<"ELEMENT AT INDEX 2 IS :"<<a.at(2)<<endl;  //element at index 2
-    cout<<"empty or not :"<<a.empty()<<endl;  //empty or not    
-    cout<<"first element :"<<a.front()<<endl;  //first element
-    cout<<"last element :"<<a.back()<<endl;  //last element
-}
-*/
+// #include<iostream>
+// #include<array>
+// using namespace std;
+// int main(){
+//     int arr[3]={1,2,3};
+//     array<int,4> a={1,2,3,4}; 
+//     int size=a.size();  //size of array
+//     for(int i=0;i<size;i++){
+//         cout<<a[i]<<" ";
+//     }
+
+//     cout<<"ELEMENT AT INDEX 2 IS :"<<a.at(2)<<endl;  //element at index 2
+//     cout<<"empty or not :"<<a.empty()<<endl;  //empty or not   . Returns bool value. 
+//     cout<<"first element :"<<a.front()<<endl;  //first element
+//     cout<<"last element :"<<a.back()<<endl;  //last element
+//     cout<<"max size :"<<a.max_size()<<endl;  //max size
+//     a.fill(10);  // all elements will be filled with 10.
+//      for(int i=0;i<size;i++){
+//         cout<<a[i]<<" ";
+//     }
+// }
+
 
 //VECTOR USING STL
-/*
-#include<iostream>
-#include<vector>
-using namespace std;
-int main(){
-     vector<int> v;    //vector declaration
-     cout<<endl;
-     vector<int> v1(5,1);  //vector declaration with size and value
-     for(int i=0;i<5;i++){  //for loop
-        cout<<v1[i]<<" ";
-     }
-     cout<<endl;
-     vector<int> v2(v1);    //copying vector v1 to v2
-     for(int i:v2){   //for each loop
-        cout<<i<<" ";
-     }
-        cout<<endl;
-     cout<<"THE CAPICITY OF VECTOR IS:"<<v.capacity()<<endl;  //capacity of vector
-     v.push_back(1);  //push_back function
-     cout<<"THE CAPICITY OF VECTOR IS:"<<v.capacity()<<endl;  //capacity of vector
-     v.push_back(2);
-     cout<<"THE CAPICITY OF VECTOR IS:"<<v.capacity()<<endl;  //capacity of vector
-     v.push_back(3);
 
-     //VECTOR DOUBLES ITS CAPACITY WHENEVER IT IS FULL.NOT the size.
+// #include<iostream>
+// #include<vector>
+// using namespace std;
+// int main(){
+//      vector<int> v;    //vector declaration
+//      cout<<endl;
+//      vector<int> v1(5,1);  //vector declaration with size and value (1 is filled 5 times)
+//      for(int i=0;i<5;i++){  //for loop
+//         cout<<v1[i]<<" ";
+//      }
+//      cout<<endl;
+//      vector<int> v2(v1);    //copying vector v1 to v2
+//      for(int i:v2){   //for each loop
+//         cout<<i<<" ";
+//      }
+//         cout<<endl;
+//      cout<<"THE CAPICITY OF VECTOR IS:"<<v.capacity()<<endl;  //capacity of vector
+//      v.push_back(1);  //push_back function
+//      cout<<"THE CAPICITY OF VECTOR IS:"<<v.capacity()<<endl;  //capacity of vector
+//      v.push_back(2);
+//      cout<<"THE CAPICITY OF VECTOR IS:"<<v.capacity()<<endl;  //capacity of vector
+//      v.push_back(3);
 
-     cout<<"THE CAPICITY OF VECTOR IS:"<<v.capacity()<<endl;  //capacity of vector
-     cout<<"THE SIZE OF VECTOR IS:"<<v.size()<<endl;  //size of vector
+//      //VECTOR DOUBLES ITS CAPACITY WHENEVER IT IS FULL.NOT the size.
 
-    cout<<"THE ELEMENT AT 2 INDEX IS:"<<v.at(2)<<endl;  //element at 2 index
-    cout<<"THE ELEMENT AT FRONT IS:"<<v.front()<<endl;  //element at front
-    cout<<"THE ELEMENT AT BACK IS:"<<v.back()<<endl;  //element at back
-    cout<<"THE ELEMENTS IN V VECTOR  BEFORE POP IS:<<endl;";  
-    for(int i:v){
-        cout<< i << " ";
-    }
-    v.pop_back();  //pop_back function
-    cout<<endl;
-    cout<<"THE ELEMENTS IN V VECTOR AFTER POP IS:<<endl;";  
-    for(int i:v){
-        cout<< i << " ";
-    }
-    cout<<endl<<"THE SIZE BEFORE CLEAR IS:"<<v.size()<<endl;  //size before clear
-    v.clear();  //clear function
-    cout<<"THE SIZE AFTER CLEAR IS:"<<v.size()<<endl;  //size after clear
-}
-*/
+//      cout<<"THE CAPICITY OF VECTOR IS:"<<v.capacity()<<endl;  //capacity of vector
+//      cout<<"THE SIZE OF VECTOR IS:"<<v.size()<<endl;  //size of vector
+
+//     cout<<"THE ELEMENT AT 2 INDEX IS:"<<v.at(2)<<endl;  //element at 2 index
+//     cout<<"THE ELEMENT AT FRONT IS:"<<v.front()<<endl;  //element at front
+//     cout<<"THE ELEMENT AT BACK IS:"<<v.back()<<endl;  //element at back
+//     cout<<"THE ELEMENTS IN V VECTOR  BEFORE POP IS:<<endl;";  
+//     for(int i:v){
+//         cout<< i << " ";
+//     }
+//     v.pop_back();  //pop_back function
+//     cout<<endl;
+//     cout<<"THE ELEMENTS IN V VECTOR AFTER POP IS:<<endl;";  
+//     for(int i:v){
+//         cout<< i << " ";
+//     }
+//     cout<<endl<<"THE SIZE BEFORE CLEAR IS:"<<v.size()<<endl;  //size before clear
+//     v.clear();  //clear function
+//     cout<<"THE SIZE AFTER CLEAR IS:"<<v.size()<<endl;  //size after clear
+// }
+
 
 
 
