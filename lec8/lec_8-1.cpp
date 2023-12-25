@@ -131,31 +131,6 @@ int main(){
 
 
 
-//problem2 not running incomplete logic
-//program to find the setbit(no.count of 1 in bit format of both number)
-
-/*
-#include<iostream>
-using namespace std;
-int setbit(int n)
-{int mask=1;
-int count;
-while(n!=0)
-{if((n&mask)!=0)
-{count++;}
-n=n>>1;
-}
-return count;    
-}
-int main(){
-    int n;
-    cin>>n;
-    int ans=setbit(n);
-    cout<<ans;
-}*/
-
-
-
 
 
 //fabanacci series
@@ -181,3 +156,127 @@ int main(){
     fabonacci(n);  
 }
 */
+
+
+
+// total no of  set bit in a number
+
+//  #include<iostream>
+//  using namespace std;
+//    int hammingWeight(int n) {
+//         int count=0;
+//         while(n!=0){
+//         if(n==0){
+//             return 0;
+//         }
+//         else if(n&1){
+//             count ++;
+//         }
+//         n=n>>1;
+//         }
+//         return  count;
+//     }
+// int main(){
+//     int n;
+//     cout<<"enter the number:";
+//     cin>>n;
+//     int ans=hammingWeight(n);
+//     cout<<ans;
+// }
+
+
+
+
+//program to find the setbit of two numbers (no of .count of 1 in bit format of both number)
+
+
+// #include<iostream>
+// using namespace std;
+// int setbit(int n)
+// { 
+//    int count=0;
+//         while(n!=0){
+//         if(n==0){
+//             return 0;
+//         }
+//         else if(n&1){
+//             count ++;
+//         }
+//         n=n>>1;
+//         }
+//         return  count;
+//     }
+// int main(){
+//     int a,b;
+//     cout<<"Enter both number";
+//     cin>>a;
+//     cin>>b;
+//     int ans=setbit(a)+setbit(b);
+//     cout<<ans;
+// }
+
+
+
+// POwer of 2 leetcode problem (not accepted by leetcode)
+// #include<iostream>
+// using namespace std;
+//    bool isPowerOfTwo(int n) {
+//         unsigned count=0;
+//         if(n==1){
+//             return true;
+//         }
+//          while(n!=0){
+//             if(n&1){
+//                 count++;
+//             }
+//             n=n>>1;
+//         }
+//         if(count==1){
+//             return true;
+//         }
+//         return false;
+//     }
+// int main(){
+//     int n;
+//     cout<<"enter the number:";
+//     cin>>n;
+//     bool ans=isPowerOfTwo(n);
+//     cout<<ans;
+// }
+
+
+//Another approach to above problem (accepted by leetcode)
+// #include<iostream>
+// using namespace std;
+//    bool isPowerOfTwo(int n) {
+//         if(n==0){
+//             return false;
+//         }
+//         else if(n==1){
+//             return true;
+//         }
+//         else if(n%2==0){
+//             return isPowerOfTwo(n/2);
+//         }
+//         else{
+//             return false;
+//         }
+//     }
+// int main(){
+//     int n;
+//     cout<<"enter the number:";  
+//     cin>>n;
+//     bool ans=isPowerOfTwo(n);
+//     cout<<ans;
+// }
+
+//Another approach to above problem (accepted by leetcode) Easy approach
+// bool isPowerOfTwo(int n) {
+//        for(int i=0;i<=30;i++){
+//             int ans=pow(2,i);
+//             if(ans==n)
+//             {
+//  return true;
+//             }
+//         }
+//         return false;

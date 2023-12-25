@@ -12,6 +12,7 @@ int main(){
     }
 }
 */
+
 //program to find the max and min elements of array
 /*
 #include<iostream>
@@ -111,54 +112,74 @@ int main(){
 */
 
 
+// Method 1 to reverse the array.
+// #include<iostream>
+// using namespace std;
+// int main(){
+//     int arr[]={1,2,3,4,5};
+//     int n=sizeof(arr)/sizeof(arr[0]);
+//     for(int i=n-1;i>=0;i--){
+//         cout<<arr[i]<<" ";
+//     }
+// } 
+
+
+// Method 2 to reverse the array.
+// #include<iostream>
+// using namespace std;
+// int main(){
+//     int arr[]={1,2,3,4,5};
+//     int b[100];
+//     int n=sizeof(arr)/sizeof(arr[0]);
+//     for(int i=0;i<n;i++){
+//         b[i]=arr[n-i-1];
+//         cout<<b[i]<<" ";
+//     }
+// }
+
+// Method 3 to reverse the array.
+// You can use two pointer approach here also.
+// #include<iostream>
+// using namespace std;
+// void reverse(int a[],int n){
+//     int start=0;
+//     int end=n-1;
+//     while(start<end)
+//     {
+//        //int  temp=a[start];
+//         //a[start]=a[end];
+//         //a[end]=temp;
+//         //or simply use predefined function swap
+//         swap(a[start],a[end]);
+//         start++;
+//         end--;
+//     }
+//     }
+// int main(){
+//     int arr[]={1,2,3,4,5};
+//     int n=sizeof(arr)/sizeof(arr[0]);
+//     reverse(arr,n);
+//     for(int i=0;i<n;i++){
+//         cout<<arr[i]<<" ";
+//     }
+// }
 
 
 
-//reverse the array
 
-#include<iostream>
-using namespace std;
-//print array can be skipped
-void printarray(int a[],int n){
-    cout<<"the array is"<<endl;
-    for(int i=0;i<n;i++){
-        cout<<" "<<a[i];
-    }
-}
-// if we dont want to use b[100] to reverse then we can use swapping technique
-/*void reverse(int a[],int n){
-    int start=0;
-    int end=n-1;
-    while(start<end)
-    {
-       //int  temp=a[start];
-        //a[start]=a[end];
-        //a[end]=temp;
-        //or simply use predefined function swap
-        swap(a[start],a[end]);
-        start++;
-        end--;
-    }
-    }*/
+/*
+Very important topic...
 
-void reverse(int a[],int n){
-    int b[100];
-    for(int i=0;i<n;i++){
-        b[i]=a[n-i-1];
-        }
-    cout<<"the reversed array is";
-    printarray(b,n);
+The scope of array:
+* The scope of array is in entire program.
+     ex: Suppose we have taken an array{1,2,3,4,5} in main function and we have called another function from main function and we have passed the array as an argument to that function. 
+        Now, if we change the value of array in that function then the value of array will be changed in main function also.
 
-    
-}
-int main(){
-    int n;
-    cin>>n;
-    int a[100];
-    int b[100];
-    cout<<"enter the elements";
-    for(int i=0;i<n;i++){
-        cin>>a[i];
-    } 
-    reverse(a,n) ;
-}
+The scope of variable:
+* The scope of variable is in the function in which it is declared. // pass by value.(call by value).
+    ex: Suppose we have declared a variable in main function and we have called another function from main function and we have passed the variable as an argument to that function. 
+        Now, if we change the value of variable in that function then the value of variable will not be changed in main function. The changed value will be available in the called function and the older value will be available in the calling function.(main function)
+       
+       // This is the reason why we use call by reference in functions.
+    * If we want to change the value of variable in main function also then we use call by reference in functions.
+*/
