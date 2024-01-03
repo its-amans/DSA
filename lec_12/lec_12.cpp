@@ -38,7 +38,7 @@ int main(){
 
 
 //first occurencxe and last occurence
-/*
+
 #include<iostream>
 using namespace std;
 int firstoccurence(int a[],int n,int key){
@@ -88,7 +88,7 @@ int main(){
     cout<<"last occurence of 2 is at index"<<lastoccurence(a,8,2)<<endl;
     return 0;
 }
-*/
+
 
 
 
