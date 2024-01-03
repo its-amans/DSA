@@ -32,17 +32,18 @@ int  mountain_array_peak(int arr[],int n,int s,int e){
         if(s>=e){
             return -1;
         }
+        else{
         if(arr[mid]>arr[mid+1]){
             mountain_array_peak(arr,n,s,mid);
         }
         else if (arr[mid]<arr[mid+1]) {
             mountain_array_peak(arr,n,mid+1,e);
         }
-        mid=s+(e-s)/2;
         return mid;
     }
+}
 int main (){
-    int arr[]={1,2,5,1,0};
+    int arr[]={1,2,5,6,1,0};
     int n=sizeof(arr)/sizeof(arr[0]);
     int s=0;
     int e=n-1;

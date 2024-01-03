@@ -29,32 +29,32 @@ int main(){
 
 //for heigher pivot element
 
-/*
-#include<iostream>
-using namespace std;
-int pivot_element(int arr[],int n){
-    int s=0;
-    int e=n-1;
-    int mid=s+(e-s)/2;
-    while(s<e){
-        if(arr[mid]<=arr[0]){
-             s=mid+1;
-        }
-        else{
-            e=mid-1;
-        }
-        mid=s+(e-s)/2;
-    }
-    return s;
-}
-int main(){
-    int arr[]={7,9,1,2,3,4};
-    cout<<pivot_element(arr,6);
-}
-*/
+
+// #include<iostream>
+// using namespace std;
+// int pivot_element(int arr[],int n){
+//     int s=0;
+//     int e=n-1;
+//     int mid=s+(e-s)/2;
+//     while(s<e){
+//         if(arr[mid]<=arr[0]){
+//              s=mid+1;
+//         }
+//         else{
+//             e=mid-1;
+//         }
+//         mid=s+(e-s)/2;
+//     }
+//     return s;
+// }
+// int main(){
+//     int arr[]={8,9,11,3,4,5};
+//     cout<<pivot_element(arr,6);
+// }
+
 
 // SORTED ROTATED ARRAY
-/*
+
 #include<iostream>
 using namespace std;
 int pivot_element(int arr[],int n){
@@ -82,10 +82,10 @@ int binarysearch(int arr[],int s,int e,int k){
             return mid;
         }
         else if(arr[mid]>k){
-            start=mid+1;
+            end=mid-1;
         }
         else if(arr[mid]<k){
-            end=mid-1;
+            start=mid+1;
         }
         mid=start+(end-start)/2;
     }
@@ -101,7 +101,7 @@ int main(){
     cout<<"enter the key";
     cin>>k;
     int pivot=pivot_element(arr,6);
-    cout<<"pivot eleme:"<<pivot;
+    cout<<"pivot eleme:"<<pivot<<endl;
     if((k>=arr[pivot]) && (k<=arr[n-1]))
     {
         cout<< binarysearch(arr,pivot,e,k);
@@ -110,7 +110,7 @@ int main(){
         cout<< binarysearch(arr,s,pivot-1,k);
         }
 }
-*/
+
 
 
 
