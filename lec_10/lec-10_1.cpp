@@ -83,12 +83,3 @@ int main(){
 }
 */
 
-
-
-
-//sort-01
-#include<iostream>
-using namespace std;
-int main(){
-    
-}

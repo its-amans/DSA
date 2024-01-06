@@ -5,7 +5,7 @@ using namespace std;
 int binarysearch(int a[],int n,int key){
         int first=0;
         int last=n-1;
-  // here if our value of start is pow(2,31) and end is pow(2,31) order the then mid will be overflowed from int range so we use 
+      // here if our value of start is pow(2,31) and end is pow(2,31) order the then mid will be overflowed from int range so we use 
       //int mid=(first+last)/2;
         int mid=first+(last-first)/2;
     while(first<=last){

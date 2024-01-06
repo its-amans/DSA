@@ -97,7 +97,7 @@ int main(){
     int key;
     cout<<"Enter the key";
     cin>>key;
-    int pivot=lower_pivot(arr,s,e)+1;
+    int pivot=lower_pivot(arr,s,e)+1;   
 // pivot ki value 1 km aa rahi thi sbme islea usme maine 1 add kr diya.
 
     cout<<pivot<<endl<<endl;
@@ -109,3 +109,107 @@ int main(){
         cout<< binarySearch(arr,s,pivot-1,key);
         }
 }
+
+
+
+// Same program    practiced once 
+
+
+
+// #include<iostream>
+// using namespace std;
+// int is_pivot(int arr[],int n){
+//     int s=0;
+//     int e=n-1;
+//     int mid=s+(e-s)/2;
+//     while(s<e){
+//         if(arr[mid]>arr[mid+1]){
+//             s=mid+1;
+//         }
+//         else if(arr[mid]<arr[mid+1]){
+//             e=mid;
+//         }
+//         mid=s+(e-s)/2;
+//     }
+//         return mid;
+// }
+// int binary_search(int arr[],int s,int e,int key){
+//     int mid=s+(e-s)/2;
+//     while(s<=e){
+//         if(arr[mid]==key){
+//             return mid;
+//         }
+//         else if(arr[mid]>key){
+//             e=mid-1;
+//         }
+//         else{
+//             s=mid+1;
+//         }
+//         mid=s+(e-s)/2;
+//     }
+//     return -1;
+// }
+// int main(){
+//     int arr[]={7,8,10,11,1,2,4};
+//     int n=sizeof(arr)/sizeof(arr[0]);
+//     int s=0;
+//     int e=n-1;
+//     cout<<is_pivot(arr,n)<<endl;
+//     int key;
+//     cout<<"Enter the key:";
+//     cin>>key;
+//     if(key>arr[is_pivot(arr,n)]&&  key<=arr[e]){
+//         cout<<binary_search(arr,is_pivot(arr,n),e,key);
+//     }
+//     else{
+//          cout<<binary_search(arr,s,is_pivot(arr,n)-1,key);
+//     }
+// }
+
+// using recursion.
+// #include<iostream>
+// using namespace std;
+// int is_pivot(int arr[],int s,int e){
+//     int mid=s+(e-s)/2;
+//         if(s>=e){
+//         return -1;
+//         }
+//         if(arr[mid]>arr[mid+1]){
+//             is_pivot(arr,mid+1,e);
+//         }
+//         else if(arr[mid]<arr[mid+1]){
+//             is_pivot(arr,s,mid);
+//         }
+//         return mid +1;
+// }
+// int binary_search(int arr[],int s,int e,int key){
+//     int mid=s+(e-s)/2;
+//         if(s>e){
+//             return -1;
+//         }
+//         if(arr[mid]==key){
+//             return mid;
+//         }
+//         else if(arr[mid]>key){
+//             binary_search(arr,s,mid-1,key);
+//         }
+//         else{
+//             binary_search(arr,mid+1,e,key);
+//         }
+// }
+// int main(){
+//     int arr[]={7,8,10,11,1,2,4};
+//     int n=sizeof(arr)/sizeof(arr[0]);
+//     int s=0;
+//     int e=n-1;
+//     cout<<is_pivot(arr,s,e)<<endl;
+//     int key;
+//     cout<<"Enter the key:";
+//     cin>>key;
+//     if(key>arr[is_pivot(arr,s,e)]&&  key<=arr[e]){
+//         cout<<binary_search(arr,is_pivot(arr,s,e),e,key);
+//     }
+//     else{
+//          cout<<binary_search(arr,s,is_pivot(arr,s,e)-1,key);
+//     }
+// }

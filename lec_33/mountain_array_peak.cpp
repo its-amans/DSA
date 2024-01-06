@@ -39,11 +39,11 @@ int  mountain_array_peak(int arr[],int n,int s,int e){
         else if (arr[mid]<arr[mid+1]) {
             mountain_array_peak(arr,n,mid+1,e);
         }
-        return mid;
+        return mid+1;
     }
 }
 int main (){
-    int arr[]={1,2,5,6,1,0};
+    int arr[]={1,2,5,6,7,1,0};
     int n=sizeof(arr)/sizeof(arr[0]);
     int s=0;
     int e=n-1;

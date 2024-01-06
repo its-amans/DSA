@@ -60,6 +60,7 @@ int first_occurence(int arr[],int key,int first,int last){
             return -1;
         }
         if(arr[mid]==key){
+            int ans=mid;
             first_occurence(arr, key,first,mid-1);
         }
         else if(arr[mid]>key){
@@ -68,7 +69,7 @@ int first_occurence(int arr[],int key,int first,int last){
         else{
             first_occurence(arr, key,mid+1,last);
         }
-        return mid;
+        return ans;
 }
 int last_occurence(int arr[],int key,int first ,int last){
     int ans=0;
