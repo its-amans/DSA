@@ -4,7 +4,7 @@ using namespace std;
 bool is_pallindrome(string &st,int s,int e) // pass by reference
 {   cout<<"Calls received for:"<<st<<endl;
     if(s>e){
-        return true;  
+        return true;  // start will be greater then end only when it is  a pallindrome otherwise it will return false in any statement
     }
 
     // ek case solve kiya first compare last
