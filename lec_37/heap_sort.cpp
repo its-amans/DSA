@@ -45,6 +45,7 @@ void heap_sort(int arr[],int n){
     for(int i=n-1;i>=0;i--){
         // 0 th element se islea swap kia h kyonkihr baar 0th position pr hi maximum element hoga maxheapify krne ke baad.
         swap(arr[0],arr[i]);  
+        // i in place of n bcz the size is decreing in each pass (i=n-1);
         maxheapify(arr,i,0);
     }
 
