@@ -29,7 +29,7 @@ void merge(int *arr, int s,int e){
     int index1=0;
     int index2=0;
     Main_array_index=s;
-    while(index1 < len1 && index2< len2){
+    while(index1 < len1 && index2 < len2){
         if(first[index1]<second[index2]){
             arr[Main_array_index++]=first[index1++];
         }

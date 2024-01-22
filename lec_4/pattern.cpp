@@ -569,6 +569,8 @@ int main()
         i++;
     }
 }
+
+
 /*
 //pattern homework
 #include<iostream>
