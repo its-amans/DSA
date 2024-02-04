@@ -39,7 +39,7 @@
 #include<iostream>
 using namespace std;
 void insertionsort(int arr[],int n){
-    for(int i=1;i<n-1;i++){
+    for(int i=1;i<n;i++){
         int temp=arr[i];
         int j=i-1;
         for(;j>=0;j--){
@@ -59,7 +59,7 @@ void insertionsort(int arr[],int n){
     }   
 }
  int main(){
-    int arr[]={10 ,1 ,7 ,4 ,8 ,2 ,11};
+    int arr[]={10 ,1 ,7 ,4 ,8 ,2 ,3};
     int n=sizeof(arr)/sizeof(arr[0]);
     cout<<"THE SORTED ARRAY IS :";
     insertionsort(arr ,n);
