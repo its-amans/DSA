@@ -47,3 +47,12 @@ Actually copy one object instances to the other object
 //SHALLOW COPY: We are actually accesing a address of same instances(feilds) from two different objects.In the shallow copy both the objects are accessing the same mem location of instances.
                // Hence if any change done to the instances of object1 then it will reflect to the object2 also.bcz both have same address of instances
 //DEEP COPY: In deep copy we are actually copying the content of one object to the other object.Both objects instances have the different address in memory.
+
+8.Copy assignment operator: It is an operator which is used to copy the content of one object to the other object.  
+ex: obj1=obj2; //Here obj1 is assigned with the content of obj2.
+
+9.Destructor: It is a special member function of the class which is used to destroy the objects of the class.see program.All properties likewise constructor.
+
+10.Static keyword: It is used to define the class members which can be accessed without creating the object of the class.
+Syntax to acess: datatype classname ::feildname=value;
+//::->scope resolution operator

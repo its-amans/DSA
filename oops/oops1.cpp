@@ -6,6 +6,7 @@ class Hero{
     public://By default the class memebers are private.
     char level;
     char *name;
+    static int timeToComplete;
     
     Hero(){
         cout<<"Constructor is called"<<endl;
@@ -51,42 +52,57 @@ class Hero{
     void setname(char name[]){
         strcpy(this->name,name);
     }
+
+    //Destructor:Used to deallocate the memory of the objects.
+    ~Hero(){
+        cout<<"Destructor is called"<<endl;
+    }
 };
 
+    int Hero::timeToComplete=2;
 int main(){
-
-    // Concept of deep copy and shallow copy
-    Hero hero1;
-    hero1.sethealth(20);
-    hero1.setlevel('c');
-    hero1.setname("Aman");
-    hero1.print();
-
-    Hero hero2(hero1); // Hero hero1=hero2; Both are same.
-    hero2.print();
-
-    // here we are changing the name in the hero1 object .
-    hero1.name[0]='C'; //   Actually i only changed the first letter of the name
-    hero1.print();
-    
-    // now this change is also updated in the hero2 object but we have actually changed the hero1 object here
-    hero2.print();
-
-    //Copy constructor
-    Hero r(200,'B');
-    r.print();
-    Hero s(r);
-    s.print();
-
-    //Default and parametrised constructor
-    //static
-    Hero b;
-    b.print();
+    cout<<"Time to complete is"<<Hero::timeToComplete<<endl;
+    //Static 
+    Hero Vaibhav; //For static the destructor is called by default.
     //Dynamic
-    Hero *c=new Hero(100);
-    (*c).print();
-    Hero *d=new Hero(100,'A');
-    d->print();
+    Hero *Raj=new Hero();//For dynamic we have to delete the obj to cal the destructor.
+    delete Raj;
+
+
+    // // Concept of deep copy and shallow copy
+    // Hero hero1;
+    // hero1.sethealth(20);
+    // hero1.setlevel('c');
+    // hero1.setname("Aman");
+    // hero1.print();
+
+    // Hero hero2(hero1); // Hero hero1=hero2; Both are same.
+    // hero2.print();
+
+    // // here we are changing the name in the hero1 object .
+    // hero1.name[0]='C'; //   Actually we only changed the first letter of the name
+    // hero1.print();
+    
+
+    // // now this change is also updated in the hero2 object but we have actually changed the hero1 object here.when default constructor used .
+    // //this will not happen if we use our defined copy constructor.
+    // hero2.print();
+
+    // //Copy constructor
+    // Hero r(200,'B');
+    // r.print();
+    // Hero s(r);
+    // s.print();
+
+    // //Default and parametrised constructor
+    // //static
+    // Hero b;
+    // b.print();
+    // //Dynamic
+    // Hero *c=new Hero(100);
+    // (*c).print();
+    // Hero *d=new Hero(100,'A');
+    // d->print();
 
 
     //Static Alllocation
