@@ -1,0 +1,49 @@
+Documentation of imps 
+//1. Size of obj = total size of instances /feilds /attributes.
+//Note:If there is an empty class then object has 1 byte of size for tracking/Indentification.\
+//Vimp Note:
+1.1 Padding is introduced in memory allocation to ensure proper alignment of data within structures. 
+CPUs have specific memory alignment requirements for different types of data. 
+When you have a structure containing different data types, the compiler might insert "padding bytes" between
+members to align them according to the CPU's requirements. 
+
+1.2. Greedy alignment refers to the practice of arranging the members of a structure or class in such a way 
+that padding is minimized. By placing members with larger alignment requirements before those with smaller
+alignment requirements, you can potentially reduce the amount of padding required.
+In languages like C++, where memory layout has a significant impact on performance due to cache lines and 
+memory access patterns, arranging members to minimize padding can lead to better memory utilization and
+potentially improved runtime efficiency.
+
+//VVimp:Due to these reasons, the size of a structure or class may be larger than the sum of the sizes of its members.
+
+//2. We can define class explicitely on diff file and can inclkude it into other file.
+// Like if class is defined in oops1.cpp then we can include it in oops2.cpp by #include "oops1.cpp"
+
+//3.ACESS MODIFIER: Defines the scope of the class members(instances & methods).
+//3.1. Public: Can be accessed from anywhere.
+//3.2. Private: Can be accessed only within the class.    
+//3.3. Protected: Can be accessed within the class and its derived class.
+Note:By default all the class memebers and behaviour(Methods) are private.
+
+//3.1. Accessing the private members of the class:
+//We can access the private members of the class by using the getters and setters methods of the class.
+//Getters: Methods to get the value of the private members.
+//Setters: Method to set the value to the private member through method parameters.
+
+//4. WE can define object statically and dynamically both.see program
+
+//5. This pointer: It is a pointer which stores the address of the current object.i.e. it is actually
+ a pointer which points to the current object.See program
+ex:     this->health=health; 
+        // Here this pointer contains the address of the current object.Hence this ->health refers to health feild of the object
+
+//6. Constructor: It is a special member function of the class which is used to initialize the objects of the class.
+//6.1. It is called automatically when the object is created.
+
+//6.2. Copy constructor: It is a constructor which initializes an object using another object of the same class.
+Actually copy one object instances to the other object
+
+//7.Shallow copy and Deep copy:
+//SHALLOW COPY: We are actually accesing a address of same instances(feilds) from two different objects.In the shallow copy both the objects are accessing the same mem location of instances.
+               // Hence if any change done to the instances of object1 then it will reflect to the object2 also.bcz both have same address of instances
+//DEEP COPY: In deep copy we are actually copying the content of one object to the other object.Both objects instances have the different address in memory.
