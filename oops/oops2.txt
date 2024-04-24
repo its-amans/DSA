@@ -11,5 +11,28 @@
     Here the class which is acquiring the properties is called as child class or derived class or sub class.
     And the class who is giving the properties and behaviour is called as parent class or base class or super class.
 
-    Syntax: class chidClass_Name : acessSpecifier parentClass_Name{}; //accessSpecifier can be public,protected,private.
+    Syntax: class chidClass_Name : acessSpecifier parentClass_Name{}; //accessSpecifier can be public,protected,private.(Mode of inheritance);
+
+    Types of inheritance:
+    1.Single Inheritance:One class is inheriting the properties of another class.
+    2.Multiple Inheritance:One class is inheriting the properties of more than one class.
+    3.Multilevel Inheritance:One class is inheriting the properties of another class and that class is inheriting the properties of another class.
+        //Syntax: class C:public B ,public A{};
+    4.Hierarchical Inheritance:One class is parent of more than one class.and maybe  those childs ar ealso be the parent for more than one class.
+        One class is inheriting the properties of another class and that class is inherited by more than one class.
+    5.Hybrid Inheritance : It is the combination of two or more than two types of inheritance.
+
+//4.Polymorphism:It is the ability to take more than one form.
+    1.Compile time polymorphism:
+        //1.Method overloading:Same method withh different parameters can be used for different purposes.
+        The function with samme name and parameters with different return type will not be considered as method overloading.causes error
+
+        //2.Operator overloading:In this we can define the work of any operator according to our choice.See program for more details.
+        Same operator with different operands can be used for different purposes.
     
+    2.Run time polymorphism:
+        //Method overriding:In this the method of parent class is overridden by the method of child class.
+             1.It is possible only through inheritance.
+             2.The name of the method should be same in both parent and child class.
+             3.The parameters/argument should be the same in both parent and child class.
+         

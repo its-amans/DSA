@@ -61,7 +61,7 @@ class Hero{
 
 int Hero::timeToComplete=2;
 int main(){
-    //Acessing the variable through ststic keyword.No need of obj to acess.
+    //Acessing the variable through static keyword.No need of obj to acess.
     cout<<"Time to complete is"<<Hero::timeToComplete<<endl;
 
     //Destructor
