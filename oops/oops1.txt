@@ -56,3 +56,15 @@ ex: obj1=obj2; //Here obj1 is assigned with the content of obj2.
 10.Static keyword: It is used to define the class members which can be accessed without creating the object of the class.
 Syntax to acess: datatype classname ::feildname=value;
 //::->scope resolution operator
+
+11. Static member function: It is a function which can be accessed without creating the object of the class.
+// It can access only the static members of the class.So it means it cannot acess other feilds of the class.
+// IT does not have this keyword as it does not have any object to point to.
+Syntax: static datatype functionname(){};
+
+12.Const keyword: It is used to define the constant members of the class.
+//It means the value of the constant members cannot be changed.
+//How it is used to define function: datatype functionname() const{};
+//It means the function is not going to change the value of the class members.
+
+13.Initialisation list: It is used to initialize the class members at the time of object creation.

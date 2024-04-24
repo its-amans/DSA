@@ -1,0 +1,15 @@
+//1.Encapsulation:Wrapping up of data memebers and methods into a single unit(class) is called Encapsulation.
+//2.Full Encapsulation:if we declare all the dat mmbers and the methods private then it is called as full encapsulation.
+     *Synonym fo rencapsulation is data hiding or info hiding.
+
+    Advantages: 1.Data hiding.
+                2.If we want twe can make class read only.i.e using the getters not setters to change the values.
+                3.Security.
+                4.Reusability.
+
+//3.Inheritance:When one class acquires the properties and behaviour of another class is called as inheritance.
+    Here the class which is acquiring the properties is called as child class or derived class or sub class.
+    And the class who is giving the properties and behaviour is called as parent class or base class or super class.
+
+    Syntax: class chidClass_Name : acessSpecifier parentClass_Name{}; //accessSpecifier can be public,protected,private.
+    
