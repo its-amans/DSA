@@ -35,4 +35,5 @@
              1.It is possible only through inheritance.
              2.The name of the method should be same in both parent and child class.
              3.The parameters/argument should be the same in both parent and child class.
-         
+
+//5.Abstraction:It is the process of hiding the implementation details and showing only the functionality to the user.
