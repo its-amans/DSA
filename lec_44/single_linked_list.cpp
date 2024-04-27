@@ -1,4 +1,4 @@
-//Singly linked list insertion .
+//Singly linked list insertion & deletion &traversing.
 
 #include<iostream>
 using namespace std;
@@ -51,24 +51,33 @@ class Node{
     void deletefrombeg(Node* &head){
         Node* temp=head;
         head=temp->next;
+        temp->next=NULL;  //This is an unwanted linewhich we have written just to ensure errors.
+        //WE dont want that if any node is deleting then it points to any node which is existing.
+        delete temp;
     }
     void deletefromend(Node* &head,Node* &tail){
         Node* temp=head;
         while(temp->next->next!=NULL){
             temp=temp->next;
         }
-        temp->next=NULL;
-        tail=temp;
+        temp->next=NULL;//This is an unwanted linewhich we have written just to ensure errors.
+        //WE dont want that if any node is deleting then it points to any node which is existing.
+        delete temp->next;
     }
     void deleteatpos(Node* &head,int pos){
         Node* temp=head;
+        Node* prev=NULL;
         int cnt=1;
-        while(cnt<pos-1){
+        while(cnt<=pos-1){
+            prev=temp;
             temp=temp->next;
             cnt++;
         }
-        temp->next=temp->next->next;
-}
+        prev->next=temp->next;
+        temp->next=NULL;//This is an unwanted linewhich we have written just to ensure errors.
+        //WE dont want that if any node is deleting then it points to any node which is existing.
+        delete temp;
+    }
 
     void display(Node* &head){
         Node* temp=head;
@@ -99,7 +108,7 @@ int main(){
     insertatend(tail,13);
     display(head);
 
-
+    //insert at pos
     insertatpos(tail,head,15,3);
     display(head);
 
@@ -107,9 +116,12 @@ int main(){
     deletefrombeg(head);
     display(head);
 
+    //delete from end
     deletefromend(head,tail);
     display(head);
 
+    //delete from position
     deleteatpos(head,2);
     display(head);
 }
+
