@@ -53,7 +53,7 @@ int main(){
     }
     else{
         cout<< binarysearch(arr,s,pivot-1,k);
-        }
+    }
 }
 
 

@@ -1,63 +1,63 @@
 // Quick sort
-// #include<iostream>
-// using namespace std;
-// int partition(int *arr,int s,int e){  // int arr[] same h int *arr
-//     int pivot=arr[s];
-//     int count =0;
-//     for(int i=s+1;i<=e;i++){
-//         if(arr[i]<=pivot){
-//             count++;
-//         }
-//     }
+#include<iostream>
+using namespace std;
+int partition(int *arr,int s,int e){  // int arr[] same h int *arr
+    int pivot=arr[s];
+    int count =0;
+    for(int i=s+1;i<=e;i++){
+        if(arr[i]<=pivot){
+            count++;
+        }
+    }
 
-//     // Actual pivot 
-//     int pivotindex=s+count; 
-//     swap(arr[pivotindex],arr[s]);
+    // Actual pivot 
+    int pivotindex=s+count; 
+    swap(arr[pivotindex],arr[s]);
 
-//     int i=s;
-//     int j=e;
-//     while(i<pivotindex && j>pivotindex){
-//         while(arr[i]<=arr[pivotindex]){
-//             i++;
-//         }
-//         while(arr[j]>arr[pivotindex]){
-//             j--;
-//         }
+    int i=s;
+    int j=e;
+    while(i<pivotindex && j>pivotindex){
+        while(arr[i]<=arr[pivotindex]){
+            i++;
+        }
+        while(arr[j]>arr[pivotindex]){
+            j--;
+        }
 
-//     if(i<pivotindex && j>pivotindex)  // islea check kiya ki ho skta h ki pivotindex ke left wale element saare chote ho pivot index ke element se.
-//                                       // aur right wale saare bade ho pivot index se.
-//     {
-//         swap(arr[i++],arr[j--]);
-//     }
-//   }
-//   return pivotindex;
-// }
-// void quicksort(int *arr,int s,int e){
-//     if(s>=e)  // that mean sif array have 0 or 1 element then hm usko sorted manenge.
-//     {
-//         return;
-//     }
+    if(i<pivotindex && j>pivotindex)  // islea check kiya ki ho skta h ki pivotindex ke left wale element saare chote ho pivot index ke element se.
+                                      // aur right wale saare bade ho pivot index se.
+    {
+        swap(arr[i++],arr[j--]);
+    }
+  }
+  return pivotindex;
+}
+void quicksort(int *arr,int s,int e){
+    if(s>=e)  // that mean sif array have 0 or 1 element then hm usko sorted manenge.
+    {
+        return;
+    }
     
-//     //Correct position of pivot.
-//     int p=partition(arr,s,e);
+    //Correct position of pivot.
+    int p=partition(arr,s,e);
 
-//     // left wale ko sort krenge
-//     quicksort(arr,s,p-1);
+    // left wale ko sort krenge
+    quicksort(arr,s,p-1);
 
-//     // right wala sort krenge
-//     quicksort(arr,p+1,e);
+    // right wala sort krenge
+    quicksort(arr,p+1,e);
 
-// }
-// int main(){
-//     int arr[]={3,1,4,5,2,4,55,5,5,6};
-//     int n=sizeof(arr)/sizeof(arr[0]);
-//     int s=0;
-//     int e=n-1;
-//     quicksort(arr,s,e);
-//     for(int i=0;i<n;i++){
-//         cout<<arr[i]<<" ";
-//     }
-// }
+}
+int main(){
+    int arr[]={3,1,4,5,2,4,55,5,5,6};
+    int n=sizeof(arr)/sizeof(arr[0]);
+    int s=0;
+    int e=n-1;
+    quicksort(arr,s,e);
+    for(int i=0;i<n;i++){
+        cout<<arr[i]<<" ";
+    }
+}
 
 
 
@@ -81,61 +81,61 @@
 
 
 //praticed once
-#include<iostream>
-using namespace std;
-int partition(int arr[],int s,int e){
-    int pivot=arr[s];
-    int count=0;
-    for(int i=s+1;i<=e;i++){
-        if(arr[i]<=pivot){
-            count++;
-        }
-    }
-    int pivotindex=s+count;
+// #include<iostream>
+// using namespace std;
+// int partition(int arr[],int s,int e){
+//     int pivot=arr[s];
+//     int count=0;
+//     for(int i=s+1;i<=e;i++){
+//         if(arr[i]<=pivot){
+//             count++;
+//         }
+//     }
+//     int pivotindex=s+count;
 
-    // swap to fix pivot at correct position
-    swap(arr[s],arr[pivotindex]);
+//     // swap to fix pivot at correct position
+//     swap(arr[s],arr[pivotindex]);
 
-    //sort k=rna h
-    int i=s;
-    int j=e;
-    while(i<pivotindex && j>pivotindex){
+//     //sort k=rna h
+//     int i=s;
+//     int j=e;
+//     while(i<pivotindex && j>pivotindex){
 
-        while(arr[i]<=arr[pivotindex]){
-            i++;
-        }
-        while(arr[j]>arr[pivotindex]){
-            j--;
-        }
+//         while(arr[i]<=arr[pivotindex]){
+//             i++;
+//         }
+//         while(arr[j]>arr[pivotindex]){
+//             j--;
+//         }
 
-        if(i<pivotindex && j>pivotindex){
-            swap(arr[i++],arr[j--]);
-        }
-    }
-    return pivotindex;
-}
-void quick_sort(int arr[],int s,int e){
-    // Base case
-    if(s>=e){
-        return;
-    }
+//         if(i<pivotindex && j>pivotindex){
+//             swap(arr[i++],arr[j--]);
+//         }
+//     }
+//     return pivotindex;
+// }
+// void quick_sort(int arr[],int s,int e){
+//     // Base case
+//     if(s>=e){
+//         return;
+//     }
 
-    //location of pivot
-    int pivot=partition(arr,s,e);
+//     //location of pivot
+//     int pivot=partition(arr,s,e);
 
-    // left wala sort krde
-    quick_sort(arr,s,pivot-1);
+//     // left wala sort krde
+//     quick_sort(arr,s,pivot-1);
 
-    //right wala sort kr de
-    quick_sort(arr,pivot+1,e);
-}
-int main(){
-    int arr[]={3,1,4,5,2,4,55,5,5,6};
-    int n=sizeof(arr)/sizeof(arr[0]);
-    int s=0;
-    int e=n-1;
-    quick_sort(arr,s,e);
-    for(int i=0;i<n;i++){
-        cout<<arr[i]<<" ";
-    }
-}
+//     //right wala sort kr de
+//     quick_sort(arr,pivot+1,e);
+// }
+// int main(){
+//     int arr[]={3,1,4,5,2,4,55,5,5,6};
+//     int n=sizeof(arr)/sizeof(arr[0]);
+//     int s=0;
+//     int e=n-1;
+//     quick_sort(arr,s,e);
+//     for(int i=0;i<n;i++){
+//         cout<<arr[i]<<" ";
+//     }
+// }
